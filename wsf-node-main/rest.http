@@ -1,0 +1,88 @@
+//////////////////// VEHICULE ////////////////////
+
+###
+GET http://localhost:3000/vehicules
+
+###
+GET http://localhost:3000/vehicules?marque=peugeot&model[]=307&model[]=3008
+
+###
+GET http://localhost:3000/vehicules/7
+
+###
+DELETE http://localhost:3000/vehicules/2
+
+###
+POST http://localhost:3000/vehicules
+Content-Type: application/json
+
+{
+    "marque": "lamborghini",
+    "model" : "Aventador",
+    "dateFabrication" : "2010-04-10"
+}
+
+###
+PUT http://localhost:3000/vehicules/1
+Content-Type: application/json
+
+{
+    "marque": "Yamahaa"
+}
+
+//////////////////// OWNER ////////////////////
+
+###
+GET http://localhost:3000/owner
+
+###
+GET http://localhost:3000/owner/2
+
+###
+DELETE http://localhost:3000/owner/2
+
+###
+POST http://localhost:3000/owner
+Content-Type: application/json
+
+{
+    "firstname" : "Abdel",
+    "lastname" : "La Famax"
+}
+
+###
+PUT http://localhost:3000/owner/2
+Content-Type: application/json
+
+{
+    "lastname" : ""
+}
+
+//////////////////// CONCESSIONAIRE ////////////////////
+
+###
+GET http://localhost:3000/concessionaire
+
+###
+GET http://localhost:3000/concessionaire/2
+
+###
+DELETE http://localhost:3000/concessionaire/2
+
+###
+POST http://localhost:3000/concessionaire
+Content-Type: application/json
+
+{
+    "address" : "Rue de Rosiers",
+    "proprietaire" : "Hugo",
+    "open" : "20"
+}
+
+###
+PUT http://localhost:3000/concessionaire/2
+Content-Type: application/json
+
+{
+    "proprietaire" : ""
+}
